@@ -1,0 +1,35 @@
+<h1>Listing payment_tokens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Code</th>
+      <th>Status</th>
+      <th>Note</th>
+      <th>Actived by</th>
+      <th>Actived site</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payment_tokens.each do |payment_token| %>
+      <tr>
+        <td><%= payment_token.user %></td>
+        <td><%= payment_token.code %></td>
+        <td><%= payment_token.status %></td>
+        <td><%= payment_token.note %></td>
+        <td><%= payment_token.actived_by %></td>
+        <td><%= payment_token.actived_site_id %></td>
+        <td><%= link_to 'Show', payment_token %></td>
+        <td><%= link_to 'Edit', edit_payment_token_path(payment_token) %></td>
+        <td><%= link_to 'Destroy', payment_token, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Payment token', new_payment_token_path %>

@@ -1,0 +1,16 @@
+<%= simple_form_for(@payment_token) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.input :code %>
+    <%= f.input :status %>
+    <%= f.input :note %>
+    <%= f.input :actived_by %>
+    <%= f.input :actived_site_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

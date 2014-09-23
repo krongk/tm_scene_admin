@@ -1,0 +1,58 @@
+# Add account credentials and API keys here.
+# See http://railsapps.github.io/rails-environment-variables.html
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry sets a local environment variable and overrides ENV variables in the Unix shell.
+# For example, setting:
+# GMAIL_USERNAME: Your_Gmail_Username
+# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
+# Add application configuration variables here, as shown below.
+#
+
+# Rails.application.secrets.domain_name
+DOMAIN_NAME: mshipei.com
+HOST_NAME: http://www.mshipei.com
+
+#Admin
+# 
+ADMIN_NAME: master
+ADMIN_EMAIL: master@inruby.com
+ADMIN_PASSWORD: kenrome
+ROLES: [admin, user, VIP]
+
+#send sms
+#ADMIN_PHONE: 18080810818|18280673990
+ADMIN_PHONE: 18080810818
+
+#send sms
+SMS_BAO_USER: inruby
+SMS_BAO_PASSWORD: kenrome001
+SMS_MAX_CHARACTER_COUNT: 64
+
+#Qiniu store
+QINIU_ACCESS_KEY: HXrvQOeDfAizpMzdanxSMiotX60zWuDXAseybFcx
+QINIU_SECRET_KEY: n886ogK5IGUwYx-M4m-NLSaP0-OTGD2_eCCsqId_
+
+#
+#Alipay
+ALIPAY_PID: 2088302301804692
+ALIPAY_KEY: fohwoskwcoielankuxmnx08h313utoqn
+ALIPAY_SELLER_EMAIL: 77632132@qq.com
+
+#payment
+PRICE_BASE: 60
+PRICE_VIP: 180
+PRICE_BIZ: 2000
+
+#the max upload image count
+MAX_IMAGE_COUNT: 20
+
+#Omniauth
+TQQ_KEY: 101148468
+TQQ_SECURT: 861e30f9adefb07ea5485ecd0f3308a9
+DOUBAN_KEY: 0274327485d6e040075c975d9184a0c0
+DOUBAN_SECURT: 1418e19127eff6b7
+WEIBO_KEY: 1246564545
+WEIBO_SECURT: 8260eabda40382558c997c969d618c78
+
+#user on devise
+SECRET_KEY_BASE: eda04eaaade78d52df4684074981e0fdf2d0951344b9d7cee81097aa1f9c1d287bf188d4e0d7ec42b191b5c870bced2f2f1c39fcbb8ff172f5d3285b6b88e7ef

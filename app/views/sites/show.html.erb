@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Template:</strong>
+  <%= @site.template %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @site.key %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @site.status %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @site.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @site.description %>
+</p>
+
+<p>
+  <strong>Preview image:</strong>
+  <%= @site.preview_image %>
+</p>
+
+<p>
+  <strong>Is private:</strong>
+  <%= @site.is_private %>
+</p>
+
+<p>
+  <strong>Private password:</strong>
+  <%= @site.private_password %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @site.html %>
+</p>
+
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>

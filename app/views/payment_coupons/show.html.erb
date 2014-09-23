@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @payment_coupon.user %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @payment_coupon.code %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @payment_coupon.price %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @payment_coupon.message %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @payment_coupon.status %>
+</p>
+
+<p>
+  <strong>Actived by:</strong>
+  <%= @payment_coupon.actived_by %>
+</p>
+
+<p>
+  <strong>Actived site:</strong>
+  <%= @payment_coupon.actived_site_id %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @payment_coupon.note %>
+</p>
+
+<%= link_to 'Edit', edit_payment_coupon_path(@payment_coupon) %> |
+<%= link_to 'Back', payment_coupons_path %>

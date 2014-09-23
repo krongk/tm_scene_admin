@@ -1,0 +1,14 @@
+<%= simple_form_for(@site_section) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :site %>
+    <%= f.association :section %>
+    <%= f.input :position %>
+    <%= f.input :html %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

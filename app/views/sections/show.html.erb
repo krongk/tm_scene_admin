@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @section.key %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @section.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @section.description %>
+</p>
+
+<p>
+  <strong>Preview image:</strong>
+  <%= @section.preview_image %>
+</p>
+
+<p>
+  <strong>Typo:</strong>
+  <%= @section.typo %>
+</p>
+
+<p>
+  <strong>Is repeat:</strong>
+  <%= @section.is_repeat %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @section.html %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @section.form %>
+</p>
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>

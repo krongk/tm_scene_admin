@@ -1,0 +1,35 @@
+<h1>Listing templates</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Init section keys</th>
+      <th>Html</th>
+      <th>Form</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @templates.each do |template| %>
+      <tr>
+        <td><%= template.id %></td>
+        <td><%= template.title %></td>
+        <td><%= template.price %></td>
+        <td><%= template.init_section_keys %></td>
+        <td><%= link_to '组件列表', template_sections_path(template) %></td>
+        <td><%= link_to '添加组件', new_template_section_path(template) %></td>
+        <td><%= link_to '显示', template %></td>
+        <td><%= link_to '修改', edit_template_path(template) %></td>
+        <td><%= link_to '删除', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Template', new_template_path %>

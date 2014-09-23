@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cate:</strong>
+  <%= @template.cate %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @template.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @template.price %>
+</p>
+
+<p>
+  <strong>Init section keys:</strong>
+  <%= @template.init_section_keys %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @template.html %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @template.form %>
+</p>
+
+<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Back', templates_path %>
