@@ -1,3 +1,10 @@
+
+<ol class="breadcrumb">
+  <li><%= link_to '修改', edit_template_section_path(@template, @section) %> </li>
+  <li><%= link_to '返回', template_sections_path(@template) %></li>
+</ol>
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -32,13 +39,12 @@
 
 <p>
   <strong>Html:</strong>
-  <%= @section.html %>
+  <pre><%= @section.html %></pre>
 </p>
 
 <p>
   <strong>Form:</strong>
-  <%= @section.form %>
+  <pre><%= @section.form %></pre>
 </p>
 
-<%= link_to 'Edit', edit_section_path(@section) %> |
-<%= link_to 'Back', sections_path %>
+

@@ -1,5 +1,5 @@
 <h1>Listing sections</h1>
-
+<h2><%= @template.title %></h2>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -9,8 +9,6 @@
       <th>Preview image</th>
       <th>Typo</th>
       <th>Is repeat</th>
-      <th>Html</th>
-      <th>Form</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,15 +22,13 @@
         <td><%= section.preview_image %></td>
         <td><%= section.typo %></td>
         <td><%= section.is_repeat %></td>
-        <td><%= section.html %></td>
-        <td><%= section.form %></td>
-        <td><%= link_to 'Show', section %></td>
-        <td><%= link_to 'Edit', edit_section_path(section) %></td>
-        <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '详细', template_section_path(@template, section) %></td>
+        <td><%= link_to '修改', edit_template_section_path(@template, section) %></td>
+        <td><%= link_to '删除', [@template, section], method: :delete, data: { confirm: '确定删除?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to 'New Section', new_template_section_path(@template) %>
+<%= link_to '添加新组件', new_template_section_path(@template), class: 'btn btn-lg btn-primary' %>

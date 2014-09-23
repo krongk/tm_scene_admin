@@ -1,9 +1,10 @@
-<p id="notice"><%= notice %></p>
+<ol class="breadcrumb">
+  <li><%= link_to '修改', edit_template_path(@template) %></li>
+  <li><%= link_to '返回', templates_path %></li>
+  <li class="active">template</li>
+</ol>
 
-<p>
-  <strong>Cate:</strong>
-  <%= @template.cate %>
-</p>
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -22,13 +23,11 @@
 
 <p>
   <strong>Html:</strong>
-  <%= @template.html %>
+  <pre><%= @template.html %></pre>
 </p>
 
 <p>
   <strong>Form:</strong>
-  <%= @template.form %>
+  <pre><%= @template.form %></pre>
 </p>
 
-<%= link_to 'Edit', edit_template_path(@template) %> |
-<%= link_to 'Back', templates_path %>

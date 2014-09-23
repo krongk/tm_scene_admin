@@ -1,6 +1,10 @@
-<h1>Editing template</h1>
+
+<ol class="breadcrumb">
+  <li><%= link_to '查看', @template %></li>
+  <li><%= link_to '返回', templates_path %></li>
+  <li class="active">template</li>
+</ol>
+
+<h1>修改模板</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @template %> |
-<%= link_to 'Back', templates_path %>

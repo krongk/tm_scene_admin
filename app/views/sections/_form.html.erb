@@ -7,7 +7,7 @@
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :preview_image %>
-    <%= f.input :typo %>
+    <%= f.input :typo, collection: Section::TYPOS %>
     <%= f.input :is_repeat %>
     <%= f.input :html %>
     <%= f.input :form %>

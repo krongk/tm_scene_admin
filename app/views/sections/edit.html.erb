@@ -1,6 +1,7 @@
-<h1>Editing section</h1>
+<ol class="breadcrumb">
+  <li><%= link_to '查看', [@template, @section] %></li>
+  <li><%= link_to '返回', template_sections_path(@template) %></li>
+</ol>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @section %> |
-<%= link_to 'Back', sections_path %>

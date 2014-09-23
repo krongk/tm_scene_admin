@@ -1,6 +1,7 @@
+
 <h1>Listing site_comments</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Site</th>
@@ -50,9 +51,9 @@
         <td><%= site_comment.status %></td>
         <td><%= site_comment.updated_by %></td>
         <td><%= site_comment.note %></td>
-        <td><%= link_to 'Show', site_comment %></td>
-        <td><%= link_to 'Edit', edit_site_comment_path(site_comment) %></td>
-        <td><%= link_to 'Destroy', site_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '查看', site_comment %></td>
+        <td><%= link_to '编辑', edit_site_comment_path(site_comment) %></td>
+        <td><%= link_to '删除', site_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -60,4 +61,4 @@
 
 <br>
 
-<%= link_to 'New Site comment', new_site_comment_path %>
+<%= link_to '添加留言', new_site_comment_path %>

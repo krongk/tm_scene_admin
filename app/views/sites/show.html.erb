@@ -1,8 +1,13 @@
+<ol class="breadcrumb">
+  <li><%= link_to '编辑', edit_site_path(@site) %></li>
+  <li><%= link_to '返回', sites_path %></li>
+</ol>
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Template:</strong>
-  <%= @site.template %>
+  <%= @site.template.id %>
 </p>
 
 <p>
@@ -27,7 +32,7 @@
 
 <p>
   <strong>Preview image:</strong>
-  <%= @site.preview_image %>
+  <%= @site.preview_image_key %>
 </p>
 
 <p>
@@ -42,8 +47,6 @@
 
 <p>
   <strong>Html:</strong>
-  <%= @site.html %>
+  <pre><%= @site.html %></pre>
 </p>
 
-<%= link_to 'Edit', edit_site_path(@site) %> |
-<%= link_to 'Back', sites_path %>

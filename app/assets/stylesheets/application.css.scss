@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+
+form{
+  width: 100%;
+  max-width: 600px;
+  margin-left: 40px;
+}
+form input, checkbox, textrea{
+  width: 100%;
+  height: 30px;
+}
+form textarea{
+  height: 400px;
+  width: 100%;
+}

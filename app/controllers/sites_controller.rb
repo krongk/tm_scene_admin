@@ -4,7 +4,7 @@ class SitesController < ApplicationController
   # GET /sites
   # GET /sites.json
   def index
-    @sites = Site.all
+    @sites = Site.order("updated_at DESC").page(params[:page] || 1)
   end
 
   # GET /sites/1
@@ -69,6 +69,6 @@ class SitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def site_params
-      params.require(:site).permit(:template_id, :key, :status, :title, :description, :preview_image, :is_private, :private_password, :html)
+      params.require(:site).permit(:template_id, :user_id, :key, :status, :title, :description, :preview_image, :is_private, :private_password, :html)
     end
 end

@@ -3,11 +3,11 @@
 
   <div class="form-inputs">
     <%= f.association :template %>
-    <%= f.input :key %>
-    <%= f.input :status %>
+    <%= f.input :user_id, as: :hidden, input_html: {value: current_user.id} %>
+    <%= f.input :status, collection: Site::STATUS %>
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= f.input :preview_image %>
+    <%= f.input :preview_image_key %>
     <%= f.input :is_private %>
     <%= f.input :private_password %>
     <%= f.input :html %>
