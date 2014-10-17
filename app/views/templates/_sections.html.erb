@@ -1,0 +1,12 @@
+<table class="table table-bordered">
+  <% template.sections.each do |section| %>
+    <tr>
+      <td><%= link_to section.key, [template, section] %></td>
+      <td><%= section.title %></td>
+      <td><%= section.description %></td>
+      <td><%= section.typo %></td>
+      <td><%= section.is_repeat %></td>
+      <td><%= link_to '修改', edit_template_section_path(template, section) %></td>
+    </tr>
+  <% end %>
+</table>

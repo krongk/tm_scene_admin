@@ -1,5 +1,5 @@
 
-<h1>Listing site_comments</h1>
+<h1>应用留言检测</h1>
 
 <table class="table table-bordered">
   <thead>
@@ -31,7 +31,7 @@
   <tbody>
     <% @site_comments.each do |site_comment| %>
       <tr>
-        <td><%= site_comment.site %></td>
+        <td><%= link_to site_comment.site.title, site_comment.site %></td>
         <td><%= site_comment.name %></td>
         <td><%= site_comment.mobile_phone %></td>
         <td><%= site_comment.tel_phone %></td>

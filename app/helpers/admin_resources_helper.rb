@@ -1,0 +1,2 @@
+module AdminResourcesHelper
+end

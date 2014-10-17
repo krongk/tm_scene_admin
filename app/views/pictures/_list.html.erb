@@ -1,0 +1,19 @@
+<h2>图片列表</h2>
+
+<div class="row">
+  <% pictures.each do |picture| %>
+    <div class="col-sm-4 col-md-2">
+      <div class="thumbnail">
+        <%= image_tag qiniu_image_path(picture.asset.url, :thumbnail => '300x300>', :quality => 80) %>
+        <div class="caption">
+          <h3><%= picture.name %></h3>
+          <p>
+            <%= link_to picture.user.email, picture.user, class: 'btn btn-mini btn-info' %> 
+            <%= link_to '删除', picture, method: :delete, data: {confirm: '确定要删除吗？'}, class: 'btn btn-mini btn-danger' %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= will_paginate pictures %>

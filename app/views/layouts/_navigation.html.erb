@@ -1,5 +1,5 @@
 <%# navigation styled for Bootstrap 3.0 %>
-<nav class="navbar navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -16,13 +16,14 @@
         <% if user_signed_in? %>
           <li><%= link_to '应用列表', sites_path %></li>
           <li><%= link_to '留言列表', site_comments_path %></li>
-          <li><%= link_to '图片列表', site_images_path %></li>
+          <li><%= link_to '图片列表', pictures_path %></li>
+          <li><%= link_to '资源列表', resources_path %></li>
           <li><%= link_to '页面列表', site_pages_path %></li>
-   
+          <li>|</li>
           <li><%= link_to '模板分类', cates_path %></li>
           <li><%= link_to '应用模板', templates_path %></li>
           <li><%= link_to '页面模板', page_templates_path %></li>
-
+          <li><%= link_to '系统资源', admin_resources_path %></li>
         <% else %>
           <li><%= link_to '登录', new_user_session_path %></li>
           <li><%#= link_to '注册', new_user_registration_path %></li>

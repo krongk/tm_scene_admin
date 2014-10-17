@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  resources :pictures
+
+  resources :galleries
+
+  resources :resources
+
+  resources :admin_resources
+
   resources :site_comments
 
   resources :site_pages
-
-  resources :site_images
 
   resources :site_sections
 

@@ -1,9 +1,9 @@
-<h1>Listing cates</h1>
+<h1>模板分类</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>名称</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,9 +12,8 @@
     <% @cates.each do |cate| %>
       <tr>
         <td><%= cate.name %></td>
-        <td><%= link_to 'Show', cate %></td>
-        <td><%= link_to 'Edit', edit_cate_path(cate) %></td>
-        <td><%= link_to 'Destroy', cate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '修改', edit_cate_path(cate) %></td>
+        <td><%= link_to '删除', cate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +21,4 @@
 
 <br>
 
-<%= link_to 'New Cate', new_cate_path %>
+<%= link_to '添加分类', new_cate_path, class: 'btn btn-lg btn-primary' %>
