@@ -4,5 +4,5 @@ class Resource < ActiveRecord::Base
                     :path => ":class/:id/:style.:extension"
 
   validates_attachment_size :asset, :less_than => 50.megabytes
-  #validates_attachment_content_type :asset, :content_type => /\Aimage\/.*\Z/
+  validates_attachment_content_type :asset, :content_type => /\Aimage\/.*\Z/
 end
