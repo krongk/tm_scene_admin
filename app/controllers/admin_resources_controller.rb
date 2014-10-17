@@ -7,6 +7,11 @@ class AdminResourcesController < ApplicationController
     @admin_resources = AdminResource.page(params[:page])
   end
 
+  def dialog_list
+    @admin_resources = AdminResource.order("updated_at DESC").page(params[:page])
+    render layout: false
+  end
+
   # GET /admin_resources/1
   # GET /admin_resources/1.json
   def show

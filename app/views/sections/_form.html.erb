@@ -6,7 +6,8 @@
     <%= f.input :key, placeholder: 'header|footer' %>
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= f.input :preview_image %>
+    <%= f.input :preview_image%>
+    <a data-target="#pictureModal" data-toggle="modal" href="/admin_resources/dialog_list">(选择系统图片)</a>
     <%= f.input :typo, collection: Section::TYPOS %>
     <%= f.input :is_repeat %>
     <%= f.input :html %>
@@ -17,3 +18,22 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+
+
+<!-- meituModal start-->
+<div id="pictureModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h1 id="hdr-title" class="text-center">图片对话框</h1>
+        </div>
+      </div>
+      <div class="modal-body meitu-body">
+        
+      </div><!-- End modal-body -->
+    </div><!-- End modal-content -->
+  </div><!-- End modal-dialog -->
+</div>
+<!-- meituModal end-->

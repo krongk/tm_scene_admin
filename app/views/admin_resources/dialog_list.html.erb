@@ -1,0 +1,29 @@
+<h1>选择音乐</h1>
+
+<div class="row">
+  <% @admin_resources.each do |picture| %>
+    <div class="col-sm-4 col-md-2">
+      <div class="thumbnail">
+        <%= image_tag picture.asset.url %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= will_paginate @admin_resources %>
+
+
+<script type="text/javascript">
+   ready2 = function() {
+      $(".thumbnail").on('click', 'img', function(e){
+        e.preventDefault();
+        $("#section_preview_image").val(this.src);
+      });
+    }
+
+    //#turbolinks style
+    $(document).ready(ready2);
+    $(document).on('page:load', ready2);
+    $('body').on('hidden.bs.modal', 'div#pictureModal', function () {
+      $(this).removeData('bs.modal');
+    });
+</script>

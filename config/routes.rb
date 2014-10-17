@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   resources :resources
 
-  resources :admin_resources
+  resources :admin_resources do 
+    collection {get :dialog_list}
+  end
 
   resources :site_comments
 
