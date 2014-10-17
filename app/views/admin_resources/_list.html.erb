@@ -8,7 +8,7 @@
         <div class="caption">
           <h3><%= picture.name %></h3>
           <p>
-            <%= link_to picture.user.email, picture.user, class: 'btn btn-mini btn-info' %> 
+            <%= link_to '修改', edit_admin_resource_path(picture), class: 'btn btn-mini btn-info' %>
             <%= link_to '删除', picture, method: :delete, data: {confirm: '确定要删除吗？'}, class: 'btn btn-mini btn-danger' %>
           </p>
         </div>

@@ -69,6 +69,6 @@ class AdminResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_resource_params
-      params.require(:admin_resource).permit(:name)
+      params.require(:admin_resource).permit(:name, :asset, :asset_file_name, :assetfile_size, :asset_content_type)
     end
 end
